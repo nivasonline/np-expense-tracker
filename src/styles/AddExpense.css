@@ -1,0 +1,41 @@
+.form {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+}
+
+.form h2 {
+  margin-bottom: 25px;
+}
+
+.form label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.form button {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: white;
+}
