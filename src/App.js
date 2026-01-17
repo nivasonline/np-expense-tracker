@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import AddExpense from "./pages/AddExpense";
 import Profile from "./pages/Profile";
+import ExpensesList from "./pages/ExpensesList";
+
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add" element={<AddExpense />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/expenses" element={<ExpensesList />} />
+
 
       </Routes>
     </BrowserRouter>

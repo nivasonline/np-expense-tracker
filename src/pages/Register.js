@@ -27,7 +27,7 @@ export default function Register() {
 
   return (
     <div className="page">
-      <div className="glass" style={{ width: 420 }}>
+      <div className="glass auth-card" style={{ width: 420 }}>
         <div className="h1">Create Account</div>
         <div className="sub">Start tracking expenses</div>
 
@@ -41,7 +41,9 @@ export default function Register() {
           onChange={e => setPassword(e.target.value)}
         />
 
-        <button className="btn" onClick={register}>Register</button>
+        <button className="auth-btn" onClick={register}>
+          Register
+        </button>
       </div>
     </div>
   );

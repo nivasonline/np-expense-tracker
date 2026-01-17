@@ -8,13 +8,11 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const login = async () => {
-    if (!email || !password) {
-      alert("Please fill all fields");
-      return;
-    }
+    if (!email || !password) return alert("Fill all fields");
 
     try {
       setLoading(true);
@@ -26,21 +24,16 @@ export default function Login() {
     }
   };
 
-  // ✅ LOADING SCREEN
-  if (loading) {
-    return <LoadingScreen text="Signing you in..." />;
-  }
+  if (loading) return <LoadingScreen text="Signing in..." />;
 
-  // ✅ NORMAL LOGIN UI
   return (
     <div className="page">
-      <div className="glass" style={{ width: 420 }}>
+      <div className="glass auth-card" style={{ width: 420 }}>
         <div className="h1">Welcome Back</div>
-        <div className="sub">Login to continue</div>
+        <div className="sub">Login to your account</div>
 
         <label>Email</label>
         <input
-          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -52,15 +45,12 @@ export default function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="btn" onClick={login}>
+        <button className="auth-btn" onClick={login}>
           Login
         </button>
 
-        <div style={{ marginTop: 20, textAlign: "center" }}>
-          Don’t have an account?{" "}
-          <Link to="/register" style={{ color: "#00c6ff", fontWeight: 600 }}>
-            Sign up
-          </Link>
+        <div className="sub" style={{ marginTop: 20 }}>
+          New user? <Link to="/register">Create Account</Link>
         </div>
       </div>
     </div>
